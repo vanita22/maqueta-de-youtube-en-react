@@ -10,8 +10,8 @@ import Login from './login';
 export default function Navbar(props) {
   let Items = props.icons;
   
-  const newItem = Items.map((element) =>
-    <Icon iconUrl = {element.icon} />
+  const newItem = Items.map((element, index) =>
+    <Icon key = {index} iconUrl = {element.icon} />
   );
   return (
     <div className="navbar">
